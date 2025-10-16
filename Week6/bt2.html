@@ -1,148 +1,126 @@
 <!doctype html>
-
 <html>
-
 <head>
-
 <meta charset="utf-8">
-
 <title>Recognize odd and even element</title>
 
 <style>
+/* --- PHẦN 1: Nhận diện dòng chẵn / lẻ --- */
+div {
+  width: 400px;
+  padding: 5px;
+}
 
-div {width: 400px;}
+/* phần tử chẵn */
+div:nth-child(even) {
+  background: #f9f9f9;
+}
 
-div:nth-child(even) (background: #f9f9f9; } /* even | odd */
-
-div:nth-child(2n + 1) {background: #ff9; } /* an + b */
-
+/* phần tử lẻ */
+div:nth-child(2n + 1) {
+  background: #ff9;
+}
 </style>
-
 </head>
 
 <body>
 
 <h1>Aptech Semester 1's Subject</h1>
-
 <div>Elementary Programming in C.</div>
-
 <div>Explore HTML, DHTML and JavaScript.</div>
-
 <div>Designing Web Sites in Dreamweaver.</div>
-
 <div>RDBMS and Data Management.</div>
-
 <div>Working with SQL Server Database Objects.</div>
-
 <div>eProject (Dreamweaver).</div>
 
 </body>
-
 </html>
-<br>
 
-
+<br><br>
 
 <!doctype html>
-
 <html>
-
 <head>
-
 <meta charset="utf-8">
-
 <title>Create product list with CSS3</title>
 
 <style type="text/css">
+/* --- PHẦN 2: Danh sách sản phẩm --- */
 
-.ProductDetails {display: none;}
+/* Ẩn chi tiết sản phẩm ban đầu */
+.ProductDetails {
+  display: none;
+  text-align: center;
+  margin-top: 8px;
+}
 
+/* Ảnh sản phẩm */
 .Product img {
-
-width: 150px;
-
-height: 150px;
-
-border-radius: 20px;
-
-box-shadow: 5px 5px 10px #aaa;
-
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #aaa;
+  transition: transform 0.3s ease;
 }
 
-.ProductName {font-weight: bold;}
+/* Hiệu ứng phóng to khi hover */
+.Product:hover img {
+  transform: scale(1.05);
+}
 
-.ProductPrice {font-style: italic;}
+/* Tên và giá sản phẩm */
+.ProductName {
+  display: block;
+  font-weight: bold;
+}
 
-";} .ProductPrice:before {content:
+.ProductPrice {
+  display: block;
+  font-style: italic;
+}
 
+/* Container từng sản phẩm */
 .Product {
-
-text-align: center;
-
-width: 150px;
-
-margin: 0px 20px;
-
-float: left;
-
-cursor: pointer;
-
+  text-align: center;
+  width: 150px;
+  margin: 0px 20px;
+  float: left;
+  cursor: pointer;
 }
 
-.Product:hover .ProductDetails {display: block;}
-
+/* Khi hover vào sản phẩm thì hiện chi tiết */
+.Product:hover .ProductDetails {
+  display: block;
+}
 </style>
 
 </head>
 
 <body>
+  <div>
+    <div class="Product">
+      <img src="rose.jpg" alt="Rose" />
+      <div class="ProductDetails">
+        <span class="ProductName">Rose</span>
+        <span class="ProductPrice">1.5$</span>
+      </div>
+    </div>
 
-    <div>
-    
     <div class="Product">
-    
-    <img src="img/rose.jpg" />
-    
-    <div class="ProductDetails">
-    
-    <span class="ProductName">Rose</span>
-    
-    <span class="ProductPrice">1.5$</span>
-    
+      <img src="tulip.jpg" alt="Tulip" />
+      <div class="ProductDetails">
+        <span class="ProductName">Tulip</span>
+        <span class="ProductPrice">2.0$</span>
+      </div>
     </div>
-    
-    </div>
-    
+
     <div class="Product">
-    
-    <img src="img/tulip.jpg" />
-    
-    <div class="ProductDetails">
-    
-    <span class="ProductName">Tulip</span>
-    
-    <span class="ProductPrice">2.0$</span>
-    
+      <img src="daisy.jpg" alt="Daisy" />
+      <div class="ProductDetails">
+        <span class="ProductName">Daisy</span>
+        <span class="ProductPrice">1.0$</span>
+      </div>
     </div>
-    
-    </div>
-    
-    <div class="Product">
-    
-    <img src="img/daisy.jpg" />
-    
-    <div class="ProductDetails">
-    
-    <span class="ProductName">Daisy</span>
-    
-    <span class="ProductPrice">1.0$</span>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </body>
-    
-    </html>
+  </div>
+</body>
+</html>
