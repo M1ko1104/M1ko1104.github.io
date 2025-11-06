@@ -1,0 +1,22 @@
+
+.alternating-list {
+    list-style: none; 
+    padding: 0;
+    margin: 20px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.alternating-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    
+}
+.alternating-list li:first-child {
+    background-color: #f0f0f0; 
+    color: #333;
+
+}
+.alternating-list li:last-child {
+    border-bottom: none;
+}
